@@ -1,0 +1,42 @@
+# itk-version: 3.1.1
+version: "3"
+
+networks:
+  frontend:
+    external: true
+  app:
+    driver: bridge
+    internal: false
+
+services:
+  elasticsearch:
+    image: elasticsearch:8.10.2
+    networks:
+      - app
+      - ${IMPORTS_NETWORK_NAME:-eventbackend_app}
+      - ${API_NETWORK_NAME:-eventapi_app}
+    ports:
+      - "9200"
+    deploy:
+      resources:
+        limits:
+          memory: 1096M
+        reservations:
+          memory: 1096M
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+
+#  Should only be used if we need to have write access in the API (frontend).
+#  rabbit:
+#    image: rabbitmq:3.12.4-management-alpine
+#    networks:
+#      - app
+#      - ${IMPORTS_NETWORK_NAME:-eventbackend_app}
+#      - ${API_NETWORK_NAME:-eventapi_app}
+#    ports:
+#      - "15672"
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=user
+#      - RABBITMQ_DEFAULT_PASS=password
+#      - RABBITMQ_ERLANG_COOKIE='d53f319cd7376f8f840aaf9889f315ab
