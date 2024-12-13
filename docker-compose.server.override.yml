@@ -1,0 +1,8 @@
+networks:
+  app:
+    driver: bridge
+    internal: false
+  api_detskeriaarhus_dk_v2_importers_app:
+    external: true
+  api_detskeriaarhus_dk_v2_api_app:
+    external: true
