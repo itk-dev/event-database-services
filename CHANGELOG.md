@@ -8,8 +8,9 @@ See [keep a changelog] for information about writing changes to this log.
 
 ## [Unreleased]
 
-## [1.1.0] - 2026-07-10
+## [1.1.0] - 2026-11-10
 
+- Update Elasticsearch to 8.19.23, the same version as event-database-imports and event-database-api
 - [PR-2](https://github.com/itk-dev/event-database-services/pull/2)
   Upgrade Elasticsearch to 8.19.18
 - Fix a broken link in the README

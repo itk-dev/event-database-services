@@ -7,7 +7,7 @@ networks:
 
 services:
   elasticsearch:
-    image: elasticsearch:8.19.18
+    image: elasticsearch:8.19.23
     restart: unless-stopped
     networks:
       - app
