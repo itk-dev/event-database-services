@@ -8,6 +8,11 @@ See [keep a changelog] for information about writing changes to this log.
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-10
+
+- [PR-4](https://github.com/itk-dev/event-database-services/pull/4)
+  Update `actions/checkout` to v7 in the release workflow (Node.js 20 is deprecated)
+
 ## [1.1.0] - 2026-11-10
 
 - Update Elasticsearch to 8.19.23, the same version as event-database-imports and event-database-api
@@ -20,7 +25,8 @@ See [keep a changelog] for information about writing changes to this log.
 ## [1.0.0] - 2024-12-13
 
 [keep a changelog]: https://keepachangelog.com/en/1.1.0/
-[Unreleased]: https://github.com/itk-dev/event-database-services/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/itk-dev/event-database-services/compare/1.1.1...HEAD
+[1.1.1]: https://github.com/itk-dev/event-database-services/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/itk-dev/event-database-services/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/itk-dev/event-database-services/releases/tag/1.0.1
 [1.0.0]: https://github.com/itk-dev/event-database-services/releases/tag/1.0.0
